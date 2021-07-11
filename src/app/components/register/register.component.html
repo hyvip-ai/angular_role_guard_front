@@ -1,0 +1,25 @@
+<div class="myspace">
+    <form class="form-floating" [formGroup]='RegistrationForm'>
+      <div class="form-floating">
+        <input formControlName= 'name' type="text" class="form-control" id="floatingName" placeholder="Name">
+        <label for="floatingName">Name</label>
+      </div>
+      <div class="form-floating">
+        <input formControlName= 'email' type="text" class="form-control" id="floatingEmail" placeholder="Email">
+        <label for="floatingEmail">Email</label>
+      </div>
+      <div class="form-floating">
+        <input formControlName= 'password' type="password" class="form-control" id="floatingPassword" placeholder="Password">
+        <label for="floatingPassword">Password</label>
+      </div>
+      <div class="form-floating">
+        <select formControlName= 'role' class="form-select" aria-label="Default select example">
+          <option selected>Open this select menu</option>
+          <option value="Student">Student</option>
+          <option value="Teacher">Teacher</option>
+          <option value="Administrator">Administrator</option>
+        </select>
+      </div>
+      <button class="btn btn-outline-primary" (click)='submitform()' [disabled]='!RegistrationForm.valid'>Submit</button>
+    </form>
+  </div>
